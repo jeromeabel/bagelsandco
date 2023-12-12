@@ -35,8 +35,10 @@ import { Image } from "astro:assets";
 
             <div class="p-16 relative">
                 <Image src={heroBgImage} alt="" class="object-cover h-full rounded-xl " /> 
-                <div class="absolute inset-0 border border-red-500">
-                    <Image src={heroFrontImage} alt="" class="border" />
+                <Image src={heroFrontImage} alt="" class="scale-125 absolute left-1/2 tabsolute top-1/2 transform -translate-x-1/2 -translate-y-1/2"/>
+                <div class="absolute bottom-24 left-0 bg-secondary-accent text-white p-8 rounded w-56">
+                    <Icon name="ic_baseline-format-quote" class="h-6 w-6" />
+                    <p class="text-sm font-bold leading-5">Sed molestie id blandit tempor. Arcu malesuada vitae aliquam in amet ultrices dui mauris amet.</p>
                 </div>
             </div>
         </div>
