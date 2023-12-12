@@ -9,12 +9,12 @@ export default {
 				sans: ['Avenir Regular', ...defaultTheme.fontFamily.sans],
 			},
 			colors: {
-				dark: '#97CB29',
-				darker: '#1A1A1A',
-				light: '#FFFFFF',
-				gris: '#C39F65',
-				"gris-light": '#F4F4F4',
-				purple: '#382213',
+				primary: '#97CB29',
+				black: '#1A1A1A', 
+				white: '#FFFFFF', 
+				secondary: '#C39F65',
+				'secondary-accent': '#382213', 
+				'grey-light': '#F4F4F4',
 			},
 			container: {
 				center: true,
