@@ -1,8 +1,44 @@
 ---
+import { Icon } from 'astro-icon';
+
 import Container from "@containers/Container.astro"
+import H1 from '@components/H1.astro'
+import CTAButton from "@components/CTAButton.astro";
+
+import heroBgImage from '@assets/hero-bg.jpeg'
+import heroFrontImage from '@assets/hero-front.png'
+import { Image } from "astro:assets";
 ---
 <section>
     <Container>
-    <h2>About</h2>
+        <div class="grid grid-cols-2 gap-12">
+
+            <div class="flex flex-col gap-12 border-b border-grey-light py-16">
+
+                <div class="flex flex-col gap-4">
+                    <p class="text-lg font-bold">In faucibus suspendisse in sagittis pharetra facilisis.</p>
+                    <H1>About</H1>
+                    <p class="text-4xl font-bold">Tellus tincidunt gravida tincidunt dui nulla arcu scelerisque sit. Aliquet.</p>
+                    <p>Gravida urna eget magna mauris tristique morbi netus faucibus massa. Curabitur at nibh vel viverra amet lectus habitasse. Sed.</p>
+                </div>
+
+                <div class="flex gap-4">
+                    <CTAButton href="/" label="Ultricies" css="bg-secondary text-white py-4"/>
+                    <CTAButton href="/" label="Tristique montes" outline css="py-4"/>
+                </div>
+
+                <div class="flex items-center gap-2">
+                    <Icon name="fluent_emoji-hand-20-regular" class="h-9 w-9" />
+                    Questions ? <a class="underline font-bold" href="/#contact">Contact us</a>
+                </div>
+            </div>
+
+            <div class="p-16 relative">
+                <Image src={heroBgImage} alt="" class="object-cover h-full rounded-xl " /> 
+                <div class="absolute inset-0 border border-red-500">
+                    <Image src={heroFrontImage} alt="" class="border" />
+                </div>
+            </div>
+        </div>
     </Container>
 </section>
