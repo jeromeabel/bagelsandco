@@ -6,19 +6,18 @@ interface Props {
 }
 
 const defaultImage: ImageMetadata = {
-  src:"/og.png",
+  src:"/og.jpg",
   width: 1200,
   height: 628,
-  format: 'png'
+  format: 'jpg'
 }
 
 const { title: mainTitle } = Astro.props;
 
-const description = "Projet pratiques pour les tests techniques de Tribu & Co";
+const description = "Projet pratique pour les tests techniques de Tribu & Co";
 const image = defaultImage;
 const publishedDate = new Date();
-const title = `${mainTitle} - Tribu & Co`;
-// const canonicalWebsiteURL = new URL(Astro.url.pathname, Astro.site);
+const title = `${mainTitle} - Bagels & Co`;
 const canonicalWebsiteURL = new URL(Astro.url.pathname, Astro.url);
 
 const socialImageURL = new URL(image.src, Astro.url);
@@ -27,15 +26,17 @@ const publishedDateString = publishedDate.toISOString().slice(0,10);
 
 <meta charset="utf-8" />
 
-<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="icon" type="image/svg+xml" href="/logo.png" />
 <link rel="manifest" href="/site.webmanifest" />
 
-<meta name="msapplication-TileColor" content="#f5ffe1" />
-<meta name="theme-color" content="#f5ffe1" />
+<meta name="msapplication-TileColor" content="#FFFFFF" />
+<meta name="theme-color" content="#FFFFFF" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="generator" content={Astro.generator} />
 
 <title>{title}</title>
+
+<link rel="preload" href="/fonts/avenir_regular-webfont.woff2" as="font" type="font/woff2" crossorigin />
 
 <meta name="title" content={title} />
 <meta name="description" content={description} />
