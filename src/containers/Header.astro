@@ -20,7 +20,7 @@ const navLinks = [
     <a href="/"><Image src={logoImage} alt="Logo de Bagels & co" class="h-16 w-16" /></a>
     <ul class="flex gap-16">
       { navLinks.map( ({ href, label }) => (<li><NavLink {href} {label} /></li>))}
-      <li><CTAButton href="/order" label="Order now" css="bg-dark text-light hover:bg-darker"/></li>
+      <li><CTAButton href="/order" label="Order now" css="bg-primary text-white hover:bg-secondary"/></li>
     </ul>
   </nav>
 </div>
