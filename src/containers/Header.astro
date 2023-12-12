@@ -1,0 +1,27 @@
+---
+import { Image } from "astro:assets";
+
+import logoImage from '@assets/logo.png';
+import CTAButton from "@components/CTAButton.astro";
+import NavLink from "@components/NavLink.astro";
+
+const navLinks = [
+  { href: "/#about", label: "About" },
+  { href: "/#essentials", label: "Our essentials" },
+  { href: "/#testimony", label: "Testimony" },
+  { href: "/#contact", label: "Contact" },
+]
+
+---
+
+<header class="my-2">
+  <div class="container py-2 border-b border-gris-light">
+  <nav class="container py-2 flex justify-between items-center ">
+    <a href="/"><Image src={logoImage} alt="Logo de Bagels & co" class="h-16 w-16" /></a>
+    <ul class="flex gap-16">
+      { navLinks.map( ({ href, label }) => (<li><NavLink {href} {label} /></li>))}
+      <li><CTAButton href="/order" label="Order now" css="bg-dark text-light hover:bg-darker"/></li>
+    </ul>
+  </nav>
+</div>
+</header>
