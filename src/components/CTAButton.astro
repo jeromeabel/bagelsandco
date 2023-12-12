@@ -9,13 +9,13 @@ interface Props {
 const { label, href, outline = false, css } = Astro.props;
 
 const cssOutline = outline
-	? ''
-	: '';
+	? 'border-black'
+	: 'border-transparent';
 ---
 
 <a
 	class:list={[
-		`max-w-max border border-transparent px-4 rounded-lg font-bold py-2 transition-all ${cssOutline} ${css}`,
+		`max-w-max border px-4 rounded-lg font-bold py-2 transition-all ${cssOutline} ${css}`,
 	]}
 	href={href}
 	aria-label={`${label} page`}
